@@ -1,11 +1,17 @@
 import React from 'react'
 
-export const Hero = () => {
+export const Hero = ({ children, hero }) => {
     return (
-        <div>
-
-        </div>
+        <header className={hero}>
+            {children}
+        </header>
     )
 }
 
 export default Hero;
+
+
+
+Hero.defaultProps = {
+    hero: "defaultHero"
+}
