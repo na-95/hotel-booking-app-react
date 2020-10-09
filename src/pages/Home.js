@@ -8,10 +8,11 @@ export const Home = () => {
     return (
         <div>
             <Hero hero="defaultHero" >
+
                 <Banner title="Luxurious Rooms" subTitle="Deluxe rooms starting at Rs. 30,000.">
                     <Link to="/rooms">
                         <button className="btn-primary">
-                            ROOMS
+                            our ROOMS
                         </button>
                     </Link>
                 </Banner>
