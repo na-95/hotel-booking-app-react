@@ -19,7 +19,7 @@ export default class Navbar extends Component {
     }
 
     render() {
-        console.log("Nav rendered")
+
         return (
             <nav className="navbar">
                 <div className="nav-center">

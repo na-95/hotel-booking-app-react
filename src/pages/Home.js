@@ -7,6 +7,7 @@ import FeaturedRooms from '../components/FeaturedRooms'
 
 export const Home = () => {
 
+
     return (
         <>
             <Hero hero="defaultHero" >

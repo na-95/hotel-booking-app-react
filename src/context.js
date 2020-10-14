@@ -5,6 +5,7 @@ import items from './data';
 const RoomContext = React.createContext()
 
 class RoomProvider extends Component {
+
     state = {
         rooms: [],
         sortedRooms: [],
@@ -23,6 +24,7 @@ class RoomProvider extends Component {
         })
     }
 
+
     formatData(items) {
         let tempItems = items.map(i => {
             let id = i.sys.id;
@@ -35,9 +37,15 @@ class RoomProvider extends Component {
         return tempItems;
     }
 
+    getRoom = (slug) => {
+        let tempRooms = [...this.state.rooms];
+        let room = tempRooms.find(i => i.slug === slug)
+        return room;
+    }
+
     render() {
         return (
-            <RoomContext.Provider value={{ ...this.state }}>
+            <RoomContext.Provider value={{ ...this.state, getRoom: this.getRoom }}>
                 {this.props.children}
             </RoomContext.Provider>
         )
