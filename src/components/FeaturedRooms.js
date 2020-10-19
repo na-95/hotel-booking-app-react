@@ -11,6 +11,7 @@ export default class FeaturedRooms extends React.Component {
 
     render() {
         let { loading, featuredRooms } = this.context;
+        console.log(featuredRooms)
         featuredRooms = featuredRooms.map(i => {
             return <Room key={i.id} room={i} />
         })

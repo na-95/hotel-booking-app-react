@@ -17,12 +17,10 @@ export default function RoomsContainer() {
                 }
 
                 return (
-                    <div>
-                        I am functional component in rooms page
-                        {console.log(loading)}
+                    <>
                         <RoomsFilter rooms={rooms} />
                         <RoomsList rooms={sortedRooms} />
-                    </div>
+                    </>
                 )
             }}
         </RoomConsumer>
